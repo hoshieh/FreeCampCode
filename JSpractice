@@ -1,5 +1,10 @@
 java code here
-declare variables var myName;
-Assign the value 7 to variable a.
+Using // will tell JavaScript to ignore the remainder of the text on the current line:
 
-Assign the contents of a to variable b. var a = 7; var b = a;
+// This is an in-line comment.
+You can make a multi-line comment beginning with /* and ending with */:
+/* This is a
+multi-line comment */
+
+// Declare myName below this line
+var myName;
