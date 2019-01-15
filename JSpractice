@@ -8,3 +8,114 @@ multi-line comment */
 
 // Declare myName below this line
 var myName;
+Assignment always goes from right to left. Everything to the right of the = operator is resolved before the value is assigned to the variable to the left of the operator.
+myVar = 5;
+myNum = myVar;
+// Only change code below this line
+var a = 7;
+var b = a;
+
+Initialize the three variables a, b, and c with 5, 10, and "I am a" respectively so that they will not be undefined.
+// Initialize these three variables
+var a = 5;
+var b = 10;
+var c = "I am a";
+// Do not change code below this line
+a = a + 1;
+b = b + 5;
+c = c + " String!";
+
+Basic JavaScript: Stand in Line
+In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
+
+Add the number to the end of the array, then remove the first element of the array.
+
+The nextInLine function should then return the element that was removed. Stand in line:Queue
+function nextInLine(arr,item) {
+  // Your code here
+  arr.push(item);
+  var removed = arr.shift (item);
+  return removed ;   // Change this line
+}
+Access Multi-Dimensional Arrays With Indexes
+var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
+Manipulate Arrays With push()
+An easy way to append data to the end of an array is via the push() function.
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+var arr = [1,2,3];
+arr.push(4);
+// arr is now [1,2,3,4]
+Manipulate Arrays With pop()
+Another way to change the data in an array is with the .pop() function.
+.pop() is used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.
+var threeArr = [1, 4, 6];
+var oneDown = threeArr.pop();
+console.log(oneDown); // Returns 6
+console.log(threeArr); // Returns [1, 4]
+Use the .pop() function to remove the last item from myArray, assigning the "popped off" value to removedFromMyArray.
+That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+example: var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+// Only change code below this line.
+myArray.unshift(["Paul",35]);
+myArray should now have [["Paul", 35], ["dog", 3]].
+function
+Write Reusable JavaScript with Functions
+In JavaScript, we can divide up our code into reusable parts called functions.
+Here's an example of a function:
+function functionName() {
+  console.log("Hello World");
+}
+You can call or invoke this function by using its name followed by parentheses, like this:
+functionName();
+example:
+function reusableFunction() {
+    console.log ("Hi World");
+}
+reusableFunction();
+
+
+Passing Values to Functions with Arguments
+Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+
+Here is a function with two parameters, param1 and param2:
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+Then we can call testFun:
+testFun("Hello", "World");
+We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
+Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.
+Call the function with two numbers as arguments.
+solution: 
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+functionWithArgs(7, 9);
+
+It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+
+Return a Value from a Function with Return
+We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+Example
+function plusThree(num) {
+  return num + 3;
+}
+var answer = plusThree(5); // 8
+solution:function timesFive(num){
+  return num * 5;
+}
+var answer = timesFive();
+
